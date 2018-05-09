@@ -1,7 +1,70 @@
-## Tutorial/Example of a Graph API Servre using apollo-server-express with Subscription
+## Example of a GraphQL API Server using apollo-server-express with Playground
 
-## 1. How to create this study project created
+## 1. Quick Start with the sample graphql-api
+* books under graphql-api/books
+* messaging under graphql-api/messaging
+
+### 1-1. Clone this repo
+```
+$ git clone https://github.com/komushi/apollo-express-study.git
+```
+
+### 1-2. Install libraries
+```
+$ cd apollo-express-study
+$ npm install
+```
+
+### 1-3. Edit .env to choose one of the samples -the 'books' or the 'messaging'
+```
+API_NAME=books
+```
 
 ```
-npm install --save dotenv express body-parser cors apollo-server-express graphql graphql-tools graphql-playground-middleware-express graphql-subscriptions subscriptions-transport-ws lowdb
+API_NAME=messaging
 ```
+
+### 1-4. Start the GraphQL API Server
+```
+$ npm start
+```
+
+### 1-5. Test Query on Playground http://localhost:4000/
+* For messaging:
+```
+{
+  messages {
+    text,
+    id
+  }
+}
+```
+
+* For books:
+```
+{
+  getAllBooks {
+    title
+    author
+    gender
+  }
+}
+```
+
+```
+{
+  getBooks(gender:"F") {
+    title
+    author
+    gender
+  } 
+}
+```
+
+## 2. Add your own graphql-api definition
+### 2-1. Create a new folder under 'graphql-api/<myapi>'
+
+### 2-2. Create type definition as 'graphql-api/<myapi>/typeDefs.js'
+
+### 2-3. Create resolver as 'graphql-api/<myapi>/resolvers.js'
+
