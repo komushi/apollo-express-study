@@ -16,8 +16,7 @@ module.exports = {
     getAllBooks: () => {
       return initBooks;
     },
-    getBooks: function (rootObj, {gender}) {
-      console.log(gender);
+    getBooksByGender: function (rootObj, {gender}) {
       return [initBooks[0]];
     }
   }

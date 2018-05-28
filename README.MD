@@ -29,12 +29,12 @@ API_NAME=messaging
 $ npm start
 ```
 
-### 1-5. Test Query on Playground http://localhost:4000/
+### 1-5. Test Query on [Playground](http://localhost:4000/)
 * For messaging:
 ```
-{
+query messages{
   messages {
-    text,
+    text
     id
   }
 }
@@ -42,7 +42,7 @@ $ npm start
 
 * For books:
 ```
-{
+query getAllBooks {
   getAllBooks {
     title
     author
@@ -52,8 +52,8 @@ $ npm start
 ```
 
 ```
-{
-  getBooks(gender:"F") {
+query getBooksByGender{
+  getBooksByGender(gender:"Female") {
     title
     author
     gender
