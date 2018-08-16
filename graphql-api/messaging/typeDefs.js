@@ -21,7 +21,7 @@ type Query {
 
 type Mutation {
   # Add a message and publish it on 'messages' subscription channel
-  messageAdd (input: MessageInput!): Message!
+  addMessage (input: MessageInput!): Message!
 }
 
 type Subscription {

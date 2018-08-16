@@ -13,7 +13,7 @@ module.exports = {
   },
 
   Mutation: {
-    messageAdd: (root, { input }) => {
+    addMessage: (root, { input }) => {
       const message = {
         // id: shortid.generate(),
         id: Date.now(),
