@@ -1,4 +1,5 @@
-module.exports = `
+const { gql } = require('apollo-server-express');
+module.exports = gql`
 # A text message send by users
 type Message {
   id: ID!
